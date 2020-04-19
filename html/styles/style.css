@@ -83,6 +83,12 @@ button {
 	color: #007AFF;
 	font-weight: 600;
 }
+.form-header {
+	display: flex;
+
+	height: 40px;
+	border: none;
+}
 .search {
 	width: 475px;
 	margin:0 auto;
