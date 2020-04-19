@@ -96,34 +96,35 @@
 .sub-title-color {
 	margin-top: 15px;
 }
-.white-button {
-	background-color: #fff;
-}
-.red-button {
-	background-color: #DD5656;
-}
-.black-button {
-	background-color: #000;
+.colors {
+	min-height: 52px;
 }
 .color-button {
-	-webkit-appearance: none;
-
 	border-radius: 50%;
 	width: 46px;
 	height: 46px;
 
-	border: 1px double #999;
+	border: 1px solid transparent;
 	transition: 0.2s all linear;
 	outline: none;
 	margin: 0 15px 0 0;
 
 	cursor: pointer;
 }
-.color-button:checked {
- 	border: 2px double black;
-
+.color-button:focus {
+ 	border: 1px solid #000;
  	width: 50px;
 	height: 50px;
+}
+.white-button {
+	background-color: #fff;
+	border: 1px solid #000;
+}
+.red-button {
+	background-color: #DD5656;
+}
+.black-button {
+	background-color: #000;
 }
 .by-button-speaker {
 	background-color: #000;
@@ -133,8 +134,6 @@
 	border: 1px solid #000;
 }
 .pages-button {
-	-webkit-appearance: none;
-
 	border-radius: 50%;
 	width: 10px;
 	height: 10px;
@@ -143,10 +142,12 @@
 	transition: 0.2s all linear;
 	outline: none;
 	margin: 0 15px 0 0;
+	padding: 0;
 
 	cursor: pointer;
+	background: #fff;
 }
-.pages-button:checked {
+.pages-button:focus, .page-one {
 	background: #000;
 }
 .speakers-img {
@@ -164,6 +165,7 @@
 }
 .earphones-box {
 	width: 390px;
+	height: 560px;
 	box-sizing: border-box;
 
 	display: inline-flex;
@@ -172,20 +174,23 @@
 
 	background: #F8F8F9;
 }
-.earphones-img__one {
-	background-image: url(../img/earphones1.png);
+.earphones-img {
 	background-repeat: no-repeat;
 	background-position: 80%;
+	/*background-size: contain;*/
+
+	align-self: stretch;
+	flex-grow: 1;
+}
+.earphones-img__one {
+	background-image: url(../img/earphones1.png);
 }
 .earphones-img__two {
 	background-image: url(../img/earphones2.png);
-	background-repeat: no-repeat;
 	background-position: 60% 0%;
 }
 .earphones-img__three {
 	background-image: url(../img/earphones3.png);
-	background-repeat: no-repeat;
-	background-position: 80%;
 }
 .earphones-name__x {
 	font-size: 30px;
@@ -196,18 +201,36 @@
 .title-earphones {
 	font-size: 14px;
 	color: #000;
+
+	margin-right: 100px;
 }
 .info-earphones {
-	margin: 330px 80px 45px 22px;
+	position: relative;
+	top: 330px;
+	left: 22px;
+	/*margin: 330px 80px 45px 22px;*/
 }
 .price-earphones {
 	color: #9D8220;
 	font-size: 25px;
+
+	min-width: 90px;
 }
 .by-button-earphones {
 	background-color: #000;
 	color: #fff;
+	border: 2px solid transparent;
+
 	padding: 11px 30px 13px 36px;
+	margin-left: 50px;
+	/*position: relative;
+	right: 150px;*/
+}
+.by-button-earphones:hover {
+	border: 2px solid #FFC700;
+}
+.price-box-earphones{
+	justify-content: flex-start;
 }
 
 
