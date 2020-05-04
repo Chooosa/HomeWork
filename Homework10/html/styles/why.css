@@ -12,8 +12,43 @@
 	display: flex;
    align-items: center;
    width: 950px;
-   margin-bottom: 20px;
+   margin-bottom: 40px;
    /*padding: 70px;*/
+}
+.heading_div {
+	display: flex;
+	flex-direction: column;
+	margin:0 auto;
+	max-width: 500px;
+	position: relative;
+}
+.heading_why {
+	position: relative;
+	margin:0 auto;
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 40px;
+}
+.lines::before {
+	content: url(../img/line-left.png);
+	position: absolute;
+	left: -330px;
+	top: 20px;
+}
+.lines::after {
+	content: url(../img/line-right.png);
+	position: absolute;
+	right: -330px;
+	top: 20px;
+}
+.lines_why::before {
+	left: -30px;
+	top: 10px;
+}
+.lines_why::after {
+	right: -30px;
+	top: 10px;
 }
 .heading__span {
 	color: #fff;

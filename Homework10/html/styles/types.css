@@ -39,10 +39,46 @@
 	height: 150px;
 	background-color: #F1F1F1;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	flex-direction: column;
 	margin:80px 100px;
+	position: relative;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+.types_block-1::before {
+	content: url(../img/types-1.png);
+	position: absolute;
+	top: 20px;
+}
+.types_block-2::before {
+	content: url(../img/types-2.png);
+	position: absolute;
+	top: 25px;
+}
+.types_block-3::before {
+	content: url(../img/types-3.png);
+	position: absolute;
+	top: 25px;
+}
+.types_block-4::before {
+	content: url(../img/types-4.png);
+	position: absolute;
+	top: 30px;
+}
+.margin-btm {
+	margin-bottom: 10px;
+}
+.types_block::after {
+	content: "";
+
+	display: block;
+	width: 30px;
+	height: 2px;
+	background-color: #7A7A7A;
+	position: absolute;
+	top: 90px;
 }
 .line {
 	width: 30px;
