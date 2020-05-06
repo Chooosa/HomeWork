@@ -29,7 +29,7 @@
 }
 .content-head__content {
 	max-width: 550px;
-	height:180px;
+	min-height:180px;
 
 	margin-right: 30px;
 	padding: 12px 14px;
@@ -43,6 +43,8 @@
 .content-body__container {
 	background: #fff;
 	padding: 20px;
+
+	justify-content: flex-start;
 }
 .content-body-right {
 	width: 195px;
@@ -59,11 +61,13 @@
 
 	padding: 10px;
 }
+.content-body-left__blocks {
+	margin-top: 16px;
+}
 .content-body-left__block {
 	width: 90px;
 	height: 165px;
 
-	margin-top: 16px;
 	margin-right: 10px;
 	padding: 0 10px;
 
