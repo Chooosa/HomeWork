@@ -46,16 +46,18 @@ window.addEventListener('load', (event) => {
     nameC.value = cookieObj.name;
     surnameC.value = cookieObj.surname;
     lastNameC.value = cookieObj.lastName;
-    if(cookieObj.age == true) {
+    if(cookieObj.age === true) {
         checkAgeC.checked = true;
     }
-    if(cookieObj.education == true) {
+    if(cookieObj.education === true) {
         checkEducationC.checked = true;
     }
-    if(cookieObj.country == true) {
+    if(cookieObj.country === true) {
         checkCountryC.checked = true;
     }
-    if (cookieObj.gender == 'male') {
+    if (cookieObj.gender === 'male') {
         genderMaleC.checked = true;
-    } else {genderFemaleC.checked = true;}
+    } else {
+        genderFemaleC.checked = true;
+    }
 });

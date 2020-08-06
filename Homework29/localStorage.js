@@ -39,21 +39,25 @@ function resetLS() {
 }
 
 window.addEventListener('load', (event) => {
-    let objLS = JSON.parse(localStorage.getItem('obj'));
+    if (localStorage.getItem('obj') !== null){
+        let objLS = JSON.parse(localStorage.getItem('obj'));
 
-    nameLS.value = objLS.name;
-    surnameLS.value = objLS.surname;
-    lastNameLS.value = objLS.lastName;
-    if(objLS.age == true) {
-        checkAgeLS.checked = true;
+        nameLS.value = objLS.name;
+        surnameLS.value = objLS.surname;
+        lastNameLS.value = objLS.lastName;
+        if(objLS.age === true) {
+            checkAgeLS.checked = true;
+        }
+        if(objLS.education === true) {
+            checkEducationLS.checked = true;
+        }
+        if(objLS.country === true) {
+            checkCountryLS.checked = true;
+        }
+        if (objLS.gender === 'male') {
+            genderMaleLS.checked = true;
+        } else {
+            genderFemaleLS.checked = true;
+        }
     }
-    if(objLS.education == true) {
-        checkEducationLS.checked = true;
-    }
-    if(objLS.country == true) {
-        checkCountryLS.checked = true;
-    }
-    if (objLS.gender == 'male') {
-        genderMaleLS.checked = true;
-    } else {genderFemaleLS.checked = true;}
 });
